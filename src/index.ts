@@ -1,4 +1,3 @@
-import "./index.css";
 const keycode = require('keycode');
 
 const article = document.querySelector('article.row.item');
