@@ -1,4 +1,4 @@
-FROM nginx:alpine
+FROM nginx:1.17.0-alpine
 
 USER root
 
@@ -13,6 +13,6 @@ EXPOSE 80
 LABEL maintainer="Engin Polat (polatengin) <engin@enginpolat.com>" \
       org.label-schema.docker.dockerfile="/Dockerfile" \
       org.label-schema.license="MIT" \
-      org.label-schema.name="nginx alpine" \
+      org.label-schema.name="KeyCode Clone" \
       org.label-schema.vcs-type="Git" \
       org.label-schema.vcs-url="https://github.com/polatengin/madrid"
