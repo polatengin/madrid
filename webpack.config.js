@@ -1,11 +1,9 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlMinifierPlugin = require('html-minifier-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
 module.exports = {
   devServer: {
@@ -22,19 +20,9 @@ module.exports = {
         test: /\.ts$/,
         use: 'ts-loader',
         exclude: /node_modules/
-      },
-      {
-        test: /\.css$/,
-        use: ['style-loader', MiniCssExtractPlugin.loader, 'css-loader']
       }
     ]
   },
-  optimization: {
-    minimizer: [
-      new OptimizeCSSAssetsPlugin({})
-    ]
-  },
-
   plugins: [
     new webpack.ProgressPlugin(),
     new CleanWebpackPlugin(),
@@ -51,7 +39,6 @@ module.exports = {
       }
     }),
     new HtmlMinifierPlugin({}),
-    new MiniCssExtractPlugin({ hash: true, filename: 'bundle.css' }),
   ],
   resolve: {
     extensions: ['.ts', '.js']
