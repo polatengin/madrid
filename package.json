@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack --mode development && postcss src/index.css > dist/bundle.css && http-server ./dist/",
-    "prod": "webpack --mode production && postcss src/index.css > dist/bundle.css && http-server ./dist/"
+    "build:dev": "webpack --mode development && postcss src/index.css > dist/bundle.css",
+    "build:prod": "webpack --mode production && postcss src/index.css > dist/bundle.css",
+    "dev": "npm run build:dev && http-server ./dist/",
+    "prod": "npm run build:prod && http-server ./dist/"
   },
   "author": "Engin Polat",
   "license": "ISC",
