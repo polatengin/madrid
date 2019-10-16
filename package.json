@@ -9,6 +9,10 @@
     "dev": "npm run build:dev && http-server ./dist/",
     "prod": "npm run build:prod && http-server ./dist/"
   },
+  "repository" : {
+    "type": "git",
+    "url": "https://github.com/polatengin/madrid.git"
+  },
   "author": "Engin Polat",
   "license": "ISC",
   "devDependencies": {
