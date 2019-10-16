@@ -14,7 +14,7 @@
     "url": "https://github.com/polatengin/madrid.git"
   },
   "author": "Engin Polat",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@types/node": "12.7.2",
     "clean-webpack-plugin": "3.0.0",
