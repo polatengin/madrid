@@ -16,7 +16,7 @@ Bu projeyi yapma sebebim;
 * [Webpack](https://github.com/webpack/webpack) ve [PostCSS](https://github.com/postcss/postcss) konfigure ederek, bir _html_ sayfasına _javascript_ ve _css_ inject etmek
 * Klavye tuş vuruşlarını yazılımın ve tarayıcının işleyiş şeklini deneyimlemek
 * [GitHub Actions](https://github.com/features/actions) ile bir pipeline oluşturmak ve çalıştırmak
-* [VS Code DevContainer](https://code.visualstudio.com/docs/remote/containers) içerisinde proje geliştirme alışkanlığı kazanmak
+* [Visual Studio Code DevContainer](https://code.visualstudio.com/docs/remote/containers) içerisinde proje geliştirme alışkanlığı kazanmak
 
 Bu projede kullandığım teknolojiler;
 
@@ -96,13 +96,13 @@ You can use the running version of this project at [https://polatengin-madrid.ne
 
 The reason I made this project;
 
-* To inject _javascript_ and _css_ into an _html_ page by configuring [Webpack](https://github.com/webpack/webpack) and [PostCSS](https://github.com/postcss/postcss)
+* To learn how to inject _javascript_ and _css_ into an _html_ page by configuring [Webpack](https://github.com/webpack/webpack) and [PostCSS](https://github.com/postcss/postcss)
 
-* Experience and understand how browsers are process keyboard events
+* Experience and understand how browsers are processing keyboard events
 
 * Create and run a pipeline with [GitHub Actions](https://github.com/features/actions)
 
-* Gain the habit of project development within [VS Code DevContainer](https://code.visualstudio.com/docs/remote/containers)
+* Gain the habit of project development within [Visual Studio Code DevContainer](https://code.visualstudio.com/docs/remote/containers)
 
 Technologies I used in this project are;
 
@@ -139,17 +139,17 @@ window.addEventListener('keydown', (e) => {
 });
 ```
 
-By calling the `stopPropagation()` and `preventDefault()` methods in the _event_ handler, we prevent the keys being processed by the browser.
+By calling the `stopPropagation()` and `preventDefault()` methods in the _event_ handler, we prevent the keys from being processed by the browser.
 
 So, even if the keys like `F5`, `F12` are pressed, the browser will not process them.
 
 We add the required _html_ code into the [src/index.html](./src/index.html) file so that a table will appear on the screen.
 
-Also we're providing the same editor settings to the developers (_space/tab_, _end-of-line-character_, etc.) with the [.editorconfig](./.editorconfig) file.
+Also, we're providing the same editor settings to the developers (_space/tab_, _end-of-line-character_, etc.) with the [.editorconfig](./.editorconfig) file.
 
-In the [tsconfig.json](./tsconfig.json) file, we give the `compilerOptions.outDir` property a value of `./dist`, so that when the [webpack](https://webpack.js.org/) compiles, the compiled files will be created in the `./dist` folder.
+In the [tsconfig.json](./tsconfig.json) file, we give the `compilerOptions.outDir` property value of `./dist`, so that when the [webpack](https://webpack.js.org/) compiles, the compiled files will be created in the `./dist` folder.
 
-In the [src/index.ts](./src/index.ts) file we capture all `keydown` events via the `window.addEventListener()` method.
+In the [src/index.ts](./src/index.ts) file, we capture all `keydown` events via the `window.addEventListener()` method.
 
 We use the following two lines to prevent any keydown events we capture from being captured by the browser.
 
@@ -170,6 +170,6 @@ Also, with the [hash](https://github.com/jantimon/html-webpack-plugin#options) o
 
 Thanks to Multi-Layered [Dockerfile](./Dockerfile), we compile the project in [node:12.11.1](https://hub.docker.com/_/node/) _image_, then move all compiled files to [nginx:1.17.0-alpine](https://hub.docker.com/_/nginx/) _image_ and expose them.
 
-At the end we have a _Docker Image_ that takes about _20MB_ in size.
+At the end, we have a _Docker Image_ that takes about _20MB_ in size.
 
 ![Sample Screenshot](sample-screenshot.gif "Sample Screenshot")
