@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "https://github.com/polatengin/madrid",
   "scripts": {
     "build:dev": "webpack --mode development && postcss src/index.css > dist/bundle.css",
     "build:prod": "webpack --mode production && postcss src/index.css > dist/bundle.css",
