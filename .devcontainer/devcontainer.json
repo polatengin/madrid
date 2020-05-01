@@ -2,7 +2,8 @@
     "name": "Madrid Development Environment",
     "dockerFile": "Dockerfile",
     "runArgs": [
-        "-v", "/var/run/docker.sock:/var/run/docker.sock"
+    "-v",
+    "/var/run/docker.sock:/var/run/docker.sock"
     ],
     "settings": {
         "terminal.integrated.shell.linux": "/bin/bash",
