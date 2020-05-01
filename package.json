@@ -10,9 +10,8 @@
   },
   "repository" : {
     "type": "git",
-    "url": "https://github.com/polatengin/madrid.git"
+    "url": "https://github.com/polatengin/madrid"
   },
-  "author": "Engin Polat",
   "license": "MIT",
   "devDependencies": {
     "@types/node": "12.11.1",
