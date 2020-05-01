@@ -1,16 +1,16 @@
 FROM node:13.10.1-buster AS builder
 
-RUN apt-get update
+WORKDIR /code
 
-# set working directory
-WORKDIR /app
+ENV PATH /code/node_modules/.bin:$PATH
 
-# add `/app/node_modules/.bin` to $PATH
-ENV PATH /app/node_modules/.bin:$PATH
+COPY . .
 
-COPY . /app
 RUN npm install
-RUN npm run build:prod
+
+RUN npx webpack --mode production
+
+RUN npx postcss src/index.css > dist/bundle.css
 
 FROM nginx:1.17.0-alpine as production
 
