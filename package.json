@@ -6,9 +6,7 @@
   "homepage": "https://github.com/polatengin/madrid",
   "scripts": {
     "build:dev": "webpack --mode development && postcss src/index.css > dist/bundle.css",
-    "build:prod": "webpack --mode production && postcss src/index.css > dist/bundle.css",
-    "dev": "npm run build:dev && http-server ./dist/",
-    "prod": "npm run build:prod && http-server ./dist/"
+    "start": "npm run build:dev && serve ./dist/"
   },
   "repository" : {
     "type": "git",
